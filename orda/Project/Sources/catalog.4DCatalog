@@ -2,6 +2,681 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="orda" uuid="1B209972F0E942E4965B6BCF6849A1B1" collation_locale="ja">
 	<schema name="DEFAULT_SCHEMA"/>
+	<table name="TitleBasics" uuid="1FFF4B316EB94669A8F5BD34381D8226" id="6">
+		<field name="Id" uuid="61776B11A5E34AB1A990E5E656E13881" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="tconst" uuid="35D036C2E4094F1CBC46C0CD3620B961" type="10" limiting_length="10" id="2"/>
+		<field name="titleType" uuid="EF709A9EAFAB4D4C938A8873DCBD7861" type="10" limiting_length="100" id="3"/>
+		<field name="primaryTitle" uuid="5560E471AFFB4A00974E4880990EFB70" type="10" limiting_length="100" id="4"/>
+		<field name="originalTitle" uuid="489A54B1193B450A8C0B3D84584D1858" type="10" limiting_length="100" id="5"/>
+		<field name="isAdult" uuid="BA00340549E0460DA9703AA4C084DB48" type="1" id="6"/>
+		<field name="startYear" uuid="0F0CCD2DC5B345A0B31EB4EFE281B0D9" type="3" id="7"/>
+		<field name="endYear" uuid="E0DA01CDA7C2448C94C5BD3D5B780CA4" type="3" id="8"/>
+		<field name="runtimeMinutes" uuid="35BEA0F431124F9D977C236FE0D0AD6E" type="3" id="9"/>
+		<primary_key field_name="Id" field_uuid="61776B11A5E34AB1A990E5E656E13881"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="9">
+				<color red="217" green="239" blue="255" alpha="255"/>
+				<coordinates left="47.68359375" top="0" width="135" height="230.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="TitleGenres" uuid="ABA544F940D5410AB6363F7670136CEB" id="7">
+		<field name="Id" uuid="090B00988766436E9638A2FE61B56ED6" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="titleBasicsId" uuid="EE7DAB732CFD49A996D41B85F031E578" type="4" id="2"/>
+		<field name="genreId" uuid="57DFE106EC67475280F170A366ECA817" type="4" id="3"/>
+		<primary_key field_name="Id" field_uuid="090B00988766436E9638A2FE61B56ED6"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="217" green="239" blue="255" alpha="255"/>
+				<coordinates left="336.66796875" top="0" width="124" height="104.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="NameBasics" uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" id="8">
+		<field name="Id" uuid="733F8B2A0D764B51B411ECCE3F47B857" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="nconst" uuid="53DEEB0B18B34314880663907E2655A9" type="10" limiting_length="10" id="2"/>
+		<field name="primaryName" uuid="61D435B5E61B44E3AF016A62D3B59F16" type="10" limiting_length="100" id="3"/>
+		<field name="birthYear" uuid="CE53F2A9E09A43C69EEF08DDD234AA8B" type="3" id="4"/>
+		<field name="deathYear" uuid="8F65A846A45947C3B6F46415F61E50F7" type="3" id="5"/>
+		<primary_key field_name="Id" field_uuid="733F8B2A0D764B51B411ECCE3F47B857"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="5">
+				<color red="250" green="242" blue="255" alpha="255"/>
+				<coordinates left="563.8671875" top="265.56640625" width="126" height="146.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="NameProfessions" uuid="1CB008FFCA834BECB79D1D6C56374480" id="9">
+		<field name="Id" uuid="16DE240E0ED642828DF113B1EB7FE805" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="nameBasicsId" uuid="05D862B639C84435B966DC9BBC1317B3" type="4" id="2"/>
+		<field name="professionId" uuid="A203024603984D4E8E307BC4340EFBCC" type="4" id="3"/>
+		<primary_key field_name="Id" field_uuid="16DE240E0ED642828DF113B1EB7FE805"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="250" green="242" blue="255" alpha="255"/>
+				<coordinates left="759.78125" top="332.23046875" width="134" height="104.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="NameTitles" uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" id="10">
+		<field name="Id" uuid="1B1396F3614C41568B2FF17F788F1A4C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="nameBasicsId" uuid="07A51683F0BF4C7AA8864BF0F07ED2C4" type="4" id="2"/>
+		<field name="titleBasicsId" uuid="FAA7FA3D64A74E128E1DAFAEBB9920D7" type="4" id="3"/>
+		<primary_key field_name="Id" field_uuid="1B1396F3614C41568B2FF17F788F1A4C"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="250" green="242" blue="255" alpha="255"/>
+				<coordinates left="381.984375" top="140.8828125" width="134" height="104.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Genre" uuid="0890D9DD8A5E40D39AD16D6B2B978A54" id="11">
+		<field name="Id" uuid="888980217ED7444FB767B2F39A3D0E5C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="E0F019710A7B45FCB4B36D844C9B0020" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="888980217ED7444FB767B2F39A3D0E5C"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="217" green="239" blue="255" alpha="255"/>
+				<coordinates left="565.453125" top="0" width="86" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Profession" uuid="60A2CA348BC2408BB6B8D3EA288FE128" id="12">
+		<field name="Id" uuid="8E7F366C001647E09A2239F4BE121E8F" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="7EC6C780DDFC4C1986B6CAEB67BB2CCB" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="8E7F366C001647E09A2239F4BE121E8F"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="250" green="242" blue="255" alpha="255"/>
+				<coordinates left="962.46484375" top="374.5703125" width="86" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="TitleAkas" uuid="F59B701728434A7D98E24948D00CC1CE" id="13">
+		<field name="Id" uuid="9B454E2FE2144F3B917C0B3A4098A055" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="titleBasicsId" uuid="F75AE28574EB4AD49B87C0A7EC508C3F" type="4" id="2"/>
+		<field name="ordering" uuid="0746CBD539D14D26A441D78CCB6C535E" type="3" id="3"/>
+		<field name="title" uuid="A9B22D80C18B46F48E44ABF8F946F1F4" type="10" limiting_length="100" id="4"/>
+		<field name="regionId" uuid="FC7F6DBD5FC1478EB6046CD8364D7C0D" type="4" id="5"/>
+		<field name="languageId" uuid="AE376DDBF58E48F4B544F5F2D400C3BA" type="4" id="6"/>
+		<field name="akaTypesId" uuid="DD6AC8338503457C891494609CB0C340" type="4" id="7"/>
+		<field name="isOriginalTitle" uuid="0404D20661FE4EA49F3B1F1C66B1C27F" type="1" id="8"/>
+		<primary_key field_name="Id" field_uuid="9B454E2FE2144F3B917C0B3A4098A055"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="249" green="255" blue="212" alpha="255"/>
+				<coordinates left="720.40234375" top="68.4609375" width="126" height="209.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Region" uuid="852719A9D4B64EC297D28BCE1D17D722" id="14">
+		<field name="Id" uuid="A4FE8416D2B04C6B9034B567A4E90559" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="4D414FAB4EDC442EAA5FB77C600C2C06" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="A4FE8416D2B04C6B9034B567A4E90559"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="249" green="255" blue="212" alpha="255"/>
+				<coordinates left="895.328125" top="0" width="86" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Language" uuid="C8D2B3EAADDB49BA9EA5DAFDE42F9A2B" id="15">
+		<field name="Id" uuid="BBA365664A2D43C0BF898F69495CCEA6" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="473878E3E51A401C9FBB459A5710A928" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="BBA365664A2D43C0BF898F69495CCEA6"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="249" green="255" blue="212" alpha="255"/>
+				<coordinates left="998.90234375" top="71.96484375" width="86" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="AkaTypes" uuid="90745B711400409CBFDBEFA20BAE4CAB" id="16">
+		<field name="Id" uuid="14EAE0CA85C843A7BC91A73ACAB0EB0F" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="titleAkasId" uuid="F1B12579094A4B1296D72261B7632EE3" type="4" id="2"/>
+		<field name="akaAttributeId" uuid="B1F773C8CD594383990FF9D2E094026E" type="4" id="3"/>
+		<primary_key field_name="Id" field_uuid="14EAE0CA85C843A7BC91A73ACAB0EB0F"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="3">
+				<color red="249" green="255" blue="212" alpha="255"/>
+				<coordinates left="976.96875" top="173.44140625" width="134" height="104.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="AkaAttribute" uuid="7EA6F049A6CB47FDB2D7654123CFC650" id="17">
+		<field name="Id" uuid="F475828322444E3680B70D5436F9FFFE" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="EF4C35E025934B31B7CA341425EB772E" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="F475828322444E3680B70D5436F9FFFE"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="249" green="255" blue="212" alpha="255"/>
+				<coordinates left="1163.58203125" top="121.7265625" width="97" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="TitlePrincipals" uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" id="18">
+		<field name="Id" uuid="A3D63E4E035240A996D0480A9C6F6692" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="titleBasicsId" uuid="A2C03667AB044C1F8DC58D64E5BC9D57" type="4" id="2"/>
+		<field name="nameBasicsId" uuid="B80602CA3B1C41FEB67D07F40B99E823" type="4" id="3"/>
+		<field name="ordering" uuid="B5402715E5D049F0A82226C5EF7BCF6D" type="3" id="4"/>
+		<field name="categoryId" uuid="9FC9D62FA5F3454FB1347FE4E211FF66" type="4" id="5"/>
+		<field name="jobId" uuid="F6E270BD44B840D6AE51E93CD92CB7FD" type="4" id="6"/>
+		<field name="value" uuid="9E84CDD80B83493FBF6B79BD616F39C2" type="21" blob_switch_size="2147483647" id="7"/>
+		<primary_key field_name="Id" field_uuid="A3D63E4E035240A996D0480A9C6F6692"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="8">
+				<color red="239" green="255" blue="234" alpha="255"/>
+				<coordinates left="298.19921875" top="280.56640625" width="147.21875" height="213.4765625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Category" uuid="03575A325D7D4C11A4966DBEEB723F11" id="21">
+		<field name="Id" uuid="39EA375A916F4192981C7EDD27594C09" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="03703452163A4E10804C47DAE9667799" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="39EA375A916F4192981C7EDD27594C09"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="239" green="255" blue="234" alpha="255"/>
+				<coordinates left="536.6015625" top="457.1796875" width="86" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Job" uuid="EA9773F74138491DA4F87E791F03DE13" id="22">
+		<field name="Id" uuid="CE14B38662C6467584CD13B74CC8291E" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="value" uuid="DA3446990F5848BE95710D9B367CC929" type="10" limiting_length="100" id="2"/>
+		<primary_key field_name="Id" field_uuid="CE14B38662C6467584CD13B74CC8291E"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="2">
+				<color red="239" green="255" blue="234" alpha="255"/>
+				<coordinates left="649.1953125" top="494.17578125" width="85" height="83.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="CC12686BEC3145DEAC0581BF738A03C5" name_Nto1="_titleForGenres" name_1toN="_genresForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="EE7DAB732CFD49A996D41B85F031E578" name="titleBasicsId">
+				<table_ref uuid="ABA544F940D5410AB6363F7670136CEB" name="TitleGenres"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="61776B11A5E34AB1A990E5E656E13881" name="Id">
+				<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="217" green="239" blue="255" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="56E4C4197AB443F4A44244AA8330365B" name_Nto1="_nameForProfessions" name_1toN="_professionsForName" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="05D862B639C84435B966DC9BBC1317B3" name="nameBasicsId">
+				<table_ref uuid="1CB008FFCA834BECB79D1D6C56374480" name="NameProfessions"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="733F8B2A0D764B51B411ECCE3F47B857" name="Id">
+				<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="250" green="242" blue="255" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="37050D849C134E3683EC29265ED0C94E" name_Nto1="_nameForTitle" name_1toN="_titleForName" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="07A51683F0BF4C7AA8864BF0F07ED2C4" name="nameBasicsId">
+				<table_ref uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" name="NameTitles"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="733F8B2A0D764B51B411ECCE3F47B857" name="Id">
+				<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="250" green="242" blue="255" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="377FEF7E94DB445890AEF18187CA676E" name_Nto1="_genreForTitles" name_1toN="_titlesForGenre" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="57DFE106EC67475280F170A366ECA817" name="genreId">
+				<table_ref uuid="ABA544F940D5410AB6363F7670136CEB" name="TitleGenres"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="888980217ED7444FB767B2F39A3D0E5C" name="Id">
+				<table_ref uuid="0890D9DD8A5E40D39AD16D6B2B978A54" name="Genre"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="217" green="239" blue="255" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="A64878D4EA3A4E91B303E774A8B38907" name_Nto1="_titleForNames" name_1toN="_namesForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="FAA7FA3D64A74E128E1DAFAEBB9920D7" name="titleBasicsId">
+				<table_ref uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" name="NameTitles"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="61776B11A5E34AB1A990E5E656E13881" name="Id">
+				<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="EC59AA8BA38B4DC09F8E9C4051FFAF6D" name_Nto1="_professionForName" name_1toN="_nameForProfession" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A203024603984D4E8E307BC4340EFBCC" name="professionId">
+				<table_ref uuid="1CB008FFCA834BECB79D1D6C56374480" name="NameProfessions"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="8E7F366C001647E09A2239F4BE121E8F" name="Id">
+				<table_ref uuid="60A2CA348BC2408BB6B8D3EA288FE128" name="Profession"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="250" green="242" blue="255" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="1305B42F9FFD4974A945DE5B143FB80D" name_Nto1="_titleForAkas" name_1toN="_akasForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="F75AE28574EB4AD49B87C0A7EC508C3F" name="titleBasicsId">
+				<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="61776B11A5E34AB1A990E5E656E13881" name="Id">
+				<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="249" green="255" blue="212" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="B6D741DBB1D04832862D19848E8684A3" name_Nto1="_regionForAkas" name_1toN="_akasForRegion" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="FC7F6DBD5FC1478EB6046CD8364D7C0D" name="regionId">
+				<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="A4FE8416D2B04C6B9034B567A4E90559" name="Id">
+				<table_ref uuid="852719A9D4B64EC297D28BCE1D17D722" name="Region"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="249" green="255" blue="212" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="598DBAEDD6EA463BADF8FAB0B5BEB496" name_Nto1="_languageForAkas" name_1toN="_akasForLanguage" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="AE376DDBF58E48F4B544F5F2D400C3BA" name="languageId">
+				<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BBA365664A2D43C0BF898F69495CCEA6" name="Id">
+				<table_ref uuid="C8D2B3EAADDB49BA9EA5DAFDE42F9A2B" name="Language"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="249" green="255" blue="212" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="1D1558D9AE0E4F42A02914ED1079EE55" name_Nto1="_akasForTypes" name_1toN="_typesForAkas" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="F1B12579094A4B1296D72261B7632EE3" name="titleAkasId">
+				<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="DD6AC8338503457C891494609CB0C340" name="akaTypesId">
+				<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="249" green="255" blue="212" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="0F57C9223DBE48C98A6D72DD6DFFE692" name_Nto1="_attributeForTypes" name_1toN="_typesForAttribute" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B1F773C8CD594383990FF9D2E094026E" name="akaAttributeId">
+				<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F475828322444E3680B70D5436F9FFFE" name="Id">
+				<table_ref uuid="7EA6F049A6CB47FDB2D7654123CFC650" name="AkaAttribute"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="249" green="255" blue="212" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="04A4526442FE4819A9A0E0B32780AAF7" name_Nto1="_titleForPrincipal" name_1toN="_principalForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A2C03667AB044C1F8DC58D64E5BC9D57" name="titleBasicsId">
+				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="61776B11A5E34AB1A990E5E656E13881" name="Id">
+				<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="239" green="255" blue="234" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="9239DE4C17784448A4063A93102E571D" name_Nto1="_nameForPrincipal" name_1toN="_principalForName" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B80602CA3B1C41FEB67D07F40B99E823" name="nameBasicsId">
+				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="733F8B2A0D764B51B411ECCE3F47B857" name="Id">
+				<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="239" green="255" blue="234" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="4A363873884A47CB8DE97DA474ACA33D" name_Nto1="_categoryForPrincipal" name_1toN="_principalForCategory" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9FC9D62FA5F3454FB1347FE4E211FF66" name="categoryId">
+				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="39EA375A916F4192981C7EDD27594C09" name="Id">
+				<table_ref uuid="03575A325D7D4C11A4966DBEEB723F11" name="Category"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="239" green="255" blue="234" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="2168F0B20B874094B2DBA5BDFD4877AD" name_Nto1="_jobForPrincipal" name_1toN="_principalForJob" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="F6E270BD44B840D6AE51E93CD92CB7FD" name="jobId">
+				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="CE14B38662C6467584CD13B74CC8291E" name="Id">
+				<table_ref uuid="EA9773F74138491DA4F87E791F03DE13" name="Job"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true">
+				<color red="239" green="255" blue="234" alpha="255"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="0018030636BD48B887E150C53B1E3892" type="7">
+		<field_ref uuid="8E7F366C001647E09A2239F4BE121E8F" name="Id">
+			<table_ref uuid="60A2CA348BC2408BB6B8D3EA288FE128" name="Profession"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="00B8DD9A86B84F10918FCCF66A429ADE" type="3">
+		<field_ref uuid="B1F773C8CD594383990FF9D2E094026E" name="akaAttributeId">
+			<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0232342C13D34010A70E03A0239805BF" type="7">
+		<field_ref uuid="BBA365664A2D43C0BF898F69495CCEA6" name="Id">
+			<table_ref uuid="C8D2B3EAADDB49BA9EA5DAFDE42F9A2B" name="Language"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="0D2DAFF6A3AE41A49A9A6A556D5DEA9D" type="3">
+		<field_ref uuid="A203024603984D4E8E307BC4340EFBCC" name="professionId">
+			<table_ref uuid="1CB008FFCA834BECB79D1D6C56374480" name="NameProfessions"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="1279774DD5AA42BC9678544DC5FB9E9B" type="1">
+		<field_ref uuid="35D036C2E4094F1CBC46C0CD3620B961" name="tconst">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="12B09FA2A78948B29C200BFB2EFD924A" type="3">
+		<field_ref uuid="B80602CA3B1C41FEB67D07F40B99E823" name="nameBasicsId">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="1B69DD9E52794A4780705EF75219879C" type="7">
+		<field_ref uuid="61776B11A5E34AB1A990E5E656E13881" name="Id">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="246D72DB7F4C4C9BA47D83DAC3F4316E" type="1">
+		<field_ref uuid="57DFE106EC67475280F170A366ECA817" name="genreId">
+			<table_ref uuid="ABA544F940D5410AB6363F7670136CEB" name="TitleGenres"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2A37B63518E14676803DDDC649426A0D" type="3">
+		<field_ref uuid="F6E270BD44B840D6AE51E93CD92CB7FD" name="jobId">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="2A6E017512744CE899E9989B0870E337" type="7">
+		<field_ref uuid="E0F019710A7B45FCB4B36D844C9B0020" name="value">
+			<table_ref uuid="0890D9DD8A5E40D39AD16D6B2B978A54" name="Genre"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="325003FAD0554F8ABD3D4595F9880FA8" type="1">
+		<field_ref uuid="53DEEB0B18B34314880663907E2655A9" name="nconst">
+			<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="37338D896F2E443DA191067B968FAC12" type="3">
+		<field_ref uuid="05D862B639C84435B966DC9BBC1317B3" name="nameBasicsId">
+			<table_ref uuid="1CB008FFCA834BECB79D1D6C56374480" name="NameProfessions"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="3B5E18797D2C4A609BDB384869155709" type="1">
+		<field_ref uuid="0F0CCD2DC5B345A0B31EB4EFE281B0D9" name="startYear">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="3F8FF5F4DC4B4EE58B18449E6445B38A" type="7">
+		<field_ref uuid="CE14B38662C6467584CD13B74CC8291E" name="Id">
+			<table_ref uuid="EA9773F74138491DA4F87E791F03DE13" name="Job"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4183D9974301405CA76E28C23C4803BB" type="1">
+		<field_ref uuid="5560E471AFFB4A00974E4880990EFB70" name="primaryTitle">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4AAD09863BE346C0B14342B6441AB1BF" type="1">
+		<field_ref uuid="7EC6C780DDFC4C1986B6CAEB67BB2CCB" name="value">
+			<table_ref uuid="60A2CA348BC2408BB6B8D3EA288FE128" name="Profession"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="546CD18B851C4354A84A1034209E9724" type="1">
+		<field_ref uuid="473878E3E51A401C9FBB459A5710A928" name="value">
+			<table_ref uuid="C8D2B3EAADDB49BA9EA5DAFDE42F9A2B" name="Language"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="55412D3D4FB6402C9C8C5CF1294EA984" type="7">
+		<field_ref uuid="16DE240E0ED642828DF113B1EB7FE805" name="Id">
+			<table_ref uuid="1CB008FFCA834BECB79D1D6C56374480" name="NameProfessions"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="58ABD47D25F04F58BB665700B1D997C4" type="3">
+		<field_ref uuid="9E84CDD80B83493FBF6B79BD616F39C2" name="value">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5999E45C18444018B82C95EA4F6D3640" type="7">
+		<field_ref uuid="9B454E2FE2144F3B917C0B3A4098A055" name="Id">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="636C2568661046BEA856D6F031775E4D" type="3">
+		<field_ref uuid="9FC9D62FA5F3454FB1347FE4E211FF66" name="categoryId">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6583D19EC5E34A1EAB19182E2489214C" type="1">
+		<field_ref uuid="61D435B5E61B44E3AF016A62D3B59F16" name="primaryName">
+			<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="660DFD3C33854EAF9455C36FD1F88BFE" type="7">
+		<field_ref uuid="14EAE0CA85C843A7BC91A73ACAB0EB0F" name="Id">
+			<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6848FA9D37DC45F79746DDFDA19BE8C6" type="1">
+		<field_ref uuid="EF4C35E025934B31B7CA341425EB772E" name="value">
+			<table_ref uuid="7EA6F049A6CB47FDB2D7654123CFC650" name="AkaAttribute"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="6D7DCCA262B34AC18A2062C20BE0497D" type="7">
+		<field_ref uuid="F475828322444E3680B70D5436F9FFFE" name="Id">
+			<table_ref uuid="7EA6F049A6CB47FDB2D7654123CFC650" name="AkaAttribute"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="75298FF57DA34CF7A84A6143E5064228" type="3">
+		<field_ref uuid="F75AE28574EB4AD49B87C0A7EC508C3F" name="titleBasicsId">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7D27CB13C6D14A5299522D8C4E8DF168" type="3">
+		<field_ref uuid="07A51683F0BF4C7AA8864BF0F07ED2C4" name="nameBasicsId">
+			<table_ref uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" name="NameTitles"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="7D3D0CACBF704BC8878B32810ADF2333" type="3">
+		<field_ref uuid="FAA7FA3D64A74E128E1DAFAEBB9920D7" name="titleBasicsId">
+			<table_ref uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" name="NameTitles"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="83DEFF9A664F487D81B7C5264916999C" type="3">
+		<field_ref uuid="FC7F6DBD5FC1478EB6046CD8364D7C0D" name="regionId">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8BA69719AB5F4561895E2AAF2A35030B" type="1">
+		<field_ref uuid="4D414FAB4EDC442EAA5FB77C600C2C06" name="value">
+			<table_ref uuid="852719A9D4B64EC297D28BCE1D17D722" name="Region"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="8D2E2A8FB62B4E4482E0F7AE7134F285" type="7">
+		<field_ref uuid="39EA375A916F4192981C7EDD27594C09" name="Id">
+			<table_ref uuid="03575A325D7D4C11A4966DBEEB723F11" name="Category"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8DFF4AD95C614DE895A36075118059EA" type="3">
+		<field_ref uuid="A9B22D80C18B46F48E44ABF8F946F1F4" name="title">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="8FCEC9E2776C458AA94F523857082583" type="3">
+		<field_ref uuid="AE376DDBF58E48F4B544F5F2D400C3BA" name="languageId">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="A2FED022E44241F8804A32D67EE07C71" type="7">
+		<field_ref uuid="888980217ED7444FB767B2F39A3D0E5C" name="Id">
+			<table_ref uuid="0890D9DD8A5E40D39AD16D6B2B978A54" name="Genre"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A45DE96572D3461D890AAEA2503101B7" type="7">
+		<field_ref uuid="A2C03667AB044C1F8DC58D64E5BC9D57" name="titleBasicsId">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A9C14F8A3780465789C2F4354679DD8E" type="3">
+		<field_ref uuid="EE7DAB732CFD49A996D41B85F031E578" name="titleBasicsId">
+			<table_ref uuid="ABA544F940D5410AB6363F7670136CEB" name="TitleGenres"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AE25DE96183B4D1986AD08CBF1FD7F87" type="7">
+		<field_ref uuid="A4FE8416D2B04C6B9034B567A4E90559" name="Id">
+			<table_ref uuid="852719A9D4B64EC297D28BCE1D17D722" name="Region"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="AF639F5345D24E87A9D49769A5024ADE" type="7">
+		<field_ref uuid="1B1396F3614C41568B2FF17F788F1A4C" name="Id">
+			<table_ref uuid="D02E74AD582C4D0EBF0EBF3F120F6DB1" name="NameTitles"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BD4355A342B948A3B21C735E947878F5" type="3">
+		<field_ref uuid="F1B12579094A4B1296D72261B7632EE3" name="titleAkasId">
+			<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C45FDE20C9594BAF8E1599400F2806C4" type="1">
+		<field_ref uuid="03703452163A4E10804C47DAE9667799" name="value">
+			<table_ref uuid="03575A325D7D4C11A4966DBEEB723F11" name="Category"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D349F1042C9D4F289B70D232C99E1CAA" type="7">
+		<field_ref uuid="DD6AC8338503457C891494609CB0C340" name="akaTypesId">
+			<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="E5ACED3BE33644348A385A532627FFAB" type="7">
+		<field_ref uuid="090B00988766436E9638A2FE61B56ED6" name="Id">
+			<table_ref uuid="ABA544F940D5410AB6363F7670136CEB" name="TitleGenres"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EE1EE7684CE249CC8C2F38248641476B" type="7">
+		<field_ref uuid="A3D63E4E035240A996D0480A9C6F6692" name="Id">
+			<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F509F5750188413BB37DFC68D6D9A649" type="1">
+		<field_ref uuid="DA3446990F5848BE95710D9B367CC929" name="value">
+			<table_ref uuid="EA9773F74138491DA4F87E791F03DE13" name="Job"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F598D083ED2F4DAD857C112BD1FD0F7E" type="7">
+		<field_ref uuid="733F8B2A0D764B51B411ECCE3F47B857" name="Id">
+			<table_ref uuid="27AFF3BF00BA4C39BEFFAD1A9003D3F5" name="NameBasics"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FC53138C5CAC498BAC6B8C0D8E4C8C12" type="3">
+		<field_ref uuid="EF709A9EAFAB4D4C938A8873DCBD7861" name="titleType">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
 	<base_extra>
 		<journal_file journal_file_enabled="true"/>
 	</base_extra>
