@@ -1,3 +1,34 @@
 {
+	"4DB": {
+		"tables": [
+			"AkaAttribute",
+			"AkaTypes",
+			"Category",
+			"Genre",
+			"Job",
+			"Language",
+			"NameBasics",
+			"NameProfessions",
+			"NameTitles",
+			"Profession",
+			"Region",
+			"TitleAkas",
+			"TitleBasics",
+			"TitleGenres",
+			"TitlePrincipals"
+		]
+	},
+	"ORDA": {
+		"classes": [
+			"DataStore",
+			"NameBasics",
+			"NameBasicsEntity",
+			"TitleAkasEntity",
+			"TitleBasics",
+			"TitleBasicsEntity",
+			"TitlePrincipals",
+			"TitlePrincipalsEntity"
+		]
+	},
 	"trash": {}
 }

@@ -345,14 +345,14 @@
 			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="1D1558D9AE0E4F42A02914ED1079EE55" name_Nto1="_akasForTypes" name_1toN="_typesForAkas" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="6A4FA0DEE46542E697FC1318C59A3822" name_Nto1="_akasForTypes" name_1toN="_typesForAkas" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
 		<related_field kind="source">
 			<field_ref uuid="F1B12579094A4B1296D72261B7632EE3" name="titleAkasId">
 				<table_ref uuid="90745B711400409CBFDBEFA20BAE4CAB" name="AkaTypes"/>
 			</field_ref>
 		</related_field>
 		<related_field kind="destination">
-			<field_ref uuid="DD6AC8338503457C891494609CB0C340" name="akaTypesId">
+			<field_ref uuid="9B454E2FE2144F3B917C0B3A4098A055" name="Id">
 				<table_ref uuid="F59B701728434A7D98E24948D00CC1CE" name="TitleAkas"/>
 			</field_ref>
 		</related_field>
