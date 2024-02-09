@@ -16,6 +16,21 @@
 			"TitleBasics",
 			"TitleGenres",
 			"TitlePrincipals"
+		],
+		"methods": [
+			"import_data"
+		]
+	},
+	"examples": {
+		"methods": [
+			"ex_001",
+			"ex_002",
+			"ex_003",
+			"ex_004",
+			"ex_005",
+			"ex_006",
+			"ex_007",
+			"ex_008"
 		]
 	},
 	"ORDA": {

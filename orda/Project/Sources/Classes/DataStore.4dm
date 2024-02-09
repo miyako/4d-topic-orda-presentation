@@ -19,15 +19,15 @@ exposed Function logout() : Boolean
 		return False:C215
 	End if 
 	
-local Function get 映画() : 4D:C1709.DataClass
+local Function get MOVIE() : 4D:C1709.DataClass
 	
 	return This:C1470.TitleBasics
 	
-local Function get 主要スタッフ() : 4D:C1709.DataClass
+local Function get STAFF() : 4D:C1709.DataClass
 	
 	return This:C1470.TitlePrincipals
 	
-local Function get 関係者() : 4D:C1709.DataClass
+local Function get PERSON() : 4D:C1709.DataClass
 	
 	return This:C1470.NameBasics
 	

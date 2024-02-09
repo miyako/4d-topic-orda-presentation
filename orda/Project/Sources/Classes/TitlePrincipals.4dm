@@ -10,7 +10,7 @@ local Function search($q : Text; $queryParams : Object) : cs:C1710.TitlePrincipa
 	
 	For each ($phrase; $phrases)
 		$i+=1
-		$criteria.push("(タイトル == :"+String:C10($i)+" or 氏名 == :"+String:C10($i)+")")
+		$criteria.push("(TITLE == :"+String:C10($i)+" or NAME == :"+String:C10($i)+")")
 	End for each 
 	
 	If ($criteria.length=0)

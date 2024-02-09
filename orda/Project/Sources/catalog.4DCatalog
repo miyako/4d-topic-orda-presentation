@@ -177,7 +177,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="2">
 				<color red="239" green="255" blue="234" alpha="255"/>
-				<coordinates left="536.6015625" top="457.1796875" width="86" height="83.33203125"/>
+				<coordinates left="624.89453125" top="474" width="86" height="83.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -188,7 +188,7 @@
 		<table_extra>
 			<editor_table_info displayable_fields_count="2">
 				<color red="239" green="255" blue="234" alpha="255"/>
-				<coordinates left="649.1953125" top="494.17578125" width="85" height="83.33203125"/>
+				<coordinates left="516.23046875" top="528.98046875" width="85" height="83.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>
@@ -379,7 +379,7 @@
 			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="04A4526442FE4819A9A0E0B32780AAF7" name_Nto1="_titleForPrincipal" name_1toN="_principalForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="04A4526442FE4819A9A0E0B32780AAF7" name_Nto1="_titleForPrincipals" name_1toN="_principalsForTitle" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
 		<related_field kind="source">
 			<field_ref uuid="A2C03667AB044C1F8DC58D64E5BC9D57" name="titleBasicsId">
 				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
@@ -396,7 +396,7 @@
 			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="9239DE4C17784448A4063A93102E571D" name_Nto1="_nameForPrincipal" name_1toN="_principalForName" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="9239DE4C17784448A4063A93102E571D" name_Nto1="_nameForPrincipals" name_1toN="_principalsForName" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
 		<related_field kind="source">
 			<field_ref uuid="B80602CA3B1C41FEB67D07F40B99E823" name="nameBasicsId">
 				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
@@ -413,7 +413,7 @@
 			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="4A363873884A47CB8DE97DA474ACA33D" name_Nto1="_categoryForPrincipal" name_1toN="_principalForCategory" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="4A363873884A47CB8DE97DA474ACA33D" name_Nto1="_categoryForPrincipals" name_1toN="_principalsForCategory" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
 		<related_field kind="source">
 			<field_ref uuid="9FC9D62FA5F3454FB1347FE4E211FF66" name="categoryId">
 				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
@@ -430,7 +430,7 @@
 			</editor_relation_info>
 		</relation_extra>
 	</relation>
-	<relation uuid="2168F0B20B874094B2DBA5BDFD4877AD" name_Nto1="_jobForPrincipal" name_1toN="_principalForJob" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+	<relation uuid="2168F0B20B874094B2DBA5BDFD4877AD" name_Nto1="_jobForPrincipals" name_1toN="_principalsForJob" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
 		<related_field kind="source">
 			<field_ref uuid="F6E270BD44B840D6AE51E93CD92CB7FD" name="jobId">
 				<table_ref uuid="5F9AEDDBADBF49BBA22EAE69E04D6842" name="TitlePrincipals"/>
