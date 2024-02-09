@@ -1,0 +1,293 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"css": "form.css",
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1050,
+	"windowMinHeight": 270,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"windowTitle": "コラボレーション",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Form.data.col": {
+					"type": "listbox",
+					"left": 10,
+					"top": 70,
+					"width": 630,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.col",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "grow",
+					"selectedItemsSource": "Form:C1466.data.sel",
+					"currentItemPositionSource": "Form:C1466.data.pos",
+					"currentItemSource": "Form:C1466.data.item",
+					"bottom": 260,
+					"selectionMode": "single",
+					"columns": [
+						{
+							"header": {
+								"text": "TITLE",
+								"name": "名前"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": true,
+							"dataSource": "This:C1470.TITLE",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 400
+						},
+						{
+							"header": {
+								"name": "Header1",
+								"text": "YEAR"
+							},
+							"name": "Column2",
+							"dataSourceTypeHint": "number",
+							"resizable": false,
+							"enterable": false,
+							"dataSource": "This:C1470.YEAR",
+							"verticalAlign": "automatic",
+							"textAlign": "center",
+							"footer": {
+								"name": "Footer2"
+							},
+							"truncateMode": "none",
+							"width": 100
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "GENRE"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.GENRE",
+							"enterable": false,
+							"resizable": false,
+							"footer": {
+								"name": "Footer3"
+							},
+							"truncateMode": "none",
+							"width": 130
+						}
+					]
+				},
+				"Form.data.item.principals": {
+					"type": "listbox",
+					"left": 650,
+					"top": 70,
+					"width": 190,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.item.principals",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "move",
+					"selectedItemsSource": "",
+					"currentItemPositionSource": "",
+					"currentItemSource": "",
+					"bottom": 260,
+					"columns": [
+						{
+							"header": {
+								"text": "STAFF",
+								"name": "主要スタッフ"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": false,
+							"dataSource": "This:C1470.NAME",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 128
+						}
+					]
+				},
+				"Form.data.item.names": {
+					"type": "listbox",
+					"left": 850,
+					"top": 70,
+					"width": 190,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.item.names",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "move",
+					"selectedItemsSource": "",
+					"currentItemPositionSource": "",
+					"currentItemSource": "",
+					"bottom": 260,
+					"columns": [
+						{
+							"header": {
+								"text": "PERSON",
+								"name": "関係者"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": false,
+							"dataSource": "This:C1470.NAME",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 128
+						}
+					]
+				},
+				"q.タイトル": {
+					"type": "input",
+					"left": 120,
+					"top": 33,
+					"width": 388,
+					"height": 22,
+					"class": "demo",
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/q.タイトル.4dm",
+					"placeholder": "タイトルで検索…"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "タイトル:",
+					"top": 33,
+					"left": 13,
+					"width": 97,
+					"height": 22,
+					"class": "demo",
+					"textAlign": "right"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "作品を検索することができます。",
+					"top": 10,
+					"left": 120,
+					"width": 236,
+					"height": 16,
+					"sizingX": "fixed"
+				},
+				"トリプル": {
+					"type": "button",
+					"text": "トリプル",
+					"top": 7,
+					"left": 938,
+					"width": 102,
+					"height": 48,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/トリプル.4dm",
+					"class": "demo",
+					"focusable": false,
+					"sizingX": "move",
+					"sizingY": "fixed"
+				},
+				"q.人物名": {
+					"type": "input",
+					"left": 650,
+					"top": 33,
+					"width": 268,
+					"height": 22,
+					"class": "demo",
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/q.人物名.4dm",
+					"placeholder": "人物名で検索…",
+					"sizingX": "move"
+				},
+				"Text": {
+					"type": "text",
+					"text": "人物名:",
+					"top": 33,
+					"left": 563,
+					"width": 77,
+					"height": 22,
+					"class": "demo",
+					"textAlign": "right",
+					"sizingX": "move"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "コラボレーション作品を検索することができます。",
+					"top": 10,
+					"left": 649,
+					"width": 296,
+					"height": 16,
+					"sizingX": "move"
+				}
+			}
+		}
+	],
+	"geometryStamp": 737,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"width": 1050,
+	"height": 270
+}

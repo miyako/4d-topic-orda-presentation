@@ -6,5 +6,5 @@ $cTitleBasics:=$esTitleBasics.extract(\
 "primaryTitle"; "TITLE"; \
 "startYear"; "YEAR"; \
 "_genresForTitle._genreForTitles.value"; "GENRE"; \
-"_namesForTitle._nameForTitle.primaryName"; "PERSON"; \
-"_principalsForTitle._nameForPrincipals.primaryName"; "STAFF")
+"_namesForTitle._nameForTitle.primaryName"; "NAMES"; \
+"_principalsForTitle._nameForPrincipals.primaryName"; "PRINCIPALS")

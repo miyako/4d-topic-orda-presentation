@@ -19,18 +19,6 @@ exposed Function logout() : Boolean
 		return False:C215
 	End if 
 	
-local Function get MOVIE() : 4D:C1709.DataClass
-	
-	return This:C1470.TitleBasics
-	
-local Function get STAFF() : 4D:C1709.DataClass
-	
-	return This:C1470.TitlePrincipals
-	
-local Function get PERSON() : 4D:C1709.DataClass
-	
-	return This:C1470.NameBasics
-	
 local Function parseSearchPhrase($q : Text) : Collection
 	
 	ARRAY LONGINT:C221($pos; 0)

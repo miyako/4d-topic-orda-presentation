@@ -1,0 +1,117 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"css": "form.css",
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 890,
+	"windowMinHeight": 270,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"windowTitle": "Movies",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Form.data.col": {
+					"type": "listbox",
+					"left": 10,
+					"top": 70,
+					"width": 870,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.col",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "grow",
+					"selectedItemsSource": "Form:C1466.data.sel",
+					"currentItemPositionSource": "Form:C1466.data.pos",
+					"currentItemSource": "Form:C1466.data.item",
+					"bottom": 260,
+					"staticColumnCount": 2,
+					"columns": [
+						{
+							"header": {
+								"text": "TITLE",
+								"name": "名前"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": true,
+							"dataSource": "This:C1470.TITLE",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 400
+						},
+						{
+							"header": {
+								"name": "Header1",
+								"text": "YEAR"
+							},
+							"name": "Column2",
+							"dataSourceTypeHint": "number",
+							"resizable": false,
+							"enterable": false,
+							"dataSource": "This:C1470.YEAR",
+							"verticalAlign": "automatic",
+							"textAlign": "center",
+							"footer": {
+								"name": "Footer2"
+							},
+							"truncateMode": "none",
+							"width": 100
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "GENRE"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.GENRE",
+							"footer": {
+								"name": "Footer3"
+							},
+							"enterable": false,
+							"truncateMode": "none"
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 674,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"width": 890,
+	"height": 270
+}

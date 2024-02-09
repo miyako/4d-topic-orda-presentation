@@ -9,5 +9,5 @@ $esTitleBasics:=ds:C1482.TitleBasics.query(\
 "ja"; "@秘密"; "animation")
 $cTitleBasics:=$esTitleBasics.toCollection("TITLE,YEAR,TITLE_JA")
 
-$esMOVIE:=ds:C1482.MOVIE.query("TITLE_JA == :1 and GENRE == :2"; "@秘密"; "animation")
-$cMOVIE:=$esMOVIE.toCollection("TITLE,YEAR,TITLE_JA")
+$esTitleBasics:=ds:C1482.TitleBasics.query("TITLE_JA == :1 and GENRE == :2"; "@秘密"; "animation")
+$cTitleBasics:=$esTitleBasics.toCollection("TITLE,YEAR,TITLE_JA")

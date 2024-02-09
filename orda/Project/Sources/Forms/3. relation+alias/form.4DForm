@@ -1,0 +1,212 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"css": "form.css",
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1010,
+	"windowMinHeight": 270,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"windowTitle": "Movies",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Form.data.sel.alternatives": {
+					"type": "listbox",
+					"left": 570,
+					"top": 70,
+					"width": 210,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.sel.alternatives",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "move",
+					"selectedItemsSource": "Form:C1466.data.alternatives",
+					"currentItemPositionSource": "",
+					"currentItemSource": "",
+					"bottom": 260,
+					"columns": [
+						{
+							"header": {
+								"text": "ALT. TITLE",
+								"name": "タイトル"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": true,
+							"dataSource": "This:C1470.title",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 128
+						}
+					]
+				},
+				"Form.data.col": {
+					"type": "listbox",
+					"left": 10,
+					"top": 70,
+					"width": 550,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.col",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "grow",
+					"selectedItemsSource": "Form:C1466.data.sel",
+					"currentItemPositionSource": "Form:C1466.data.pos",
+					"currentItemSource": "Form:C1466.data.item",
+					"bottom": 260,
+					"staticColumnCount": 2,
+					"columns": [
+						{
+							"header": {
+								"text": "TITLE",
+								"name": "名前"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": true,
+							"dataSource": "This:C1470.TITLE",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 400
+						},
+						{
+							"header": {
+								"name": "Header1",
+								"text": "YEAR"
+							},
+							"name": "Column2",
+							"dataSourceTypeHint": "number",
+							"resizable": false,
+							"enterable": false,
+							"dataSource": "This:C1470.YEAR",
+							"verticalAlign": "automatic",
+							"textAlign": "center",
+							"footer": {
+								"name": "Footer2"
+							},
+							"truncateMode": "none",
+							"width": 100
+						}
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Form.data.sel.alternatives",
+					"top": 14,
+					"left": 570,
+					"width": 210,
+					"height": 46
+				},
+				"Form.data.alternatives.language": {
+					"type": "listbox",
+					"left": 790,
+					"top": 70,
+					"width": 210,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.alternatives.language",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "move",
+					"selectedItemsSource": "",
+					"currentItemPositionSource": "",
+					"currentItemSource": "",
+					"bottom": 260,
+					"columns": [
+						{
+							"header": {
+								"text": "LANGUAGE",
+								"name": "タイトル1"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": true,
+							"dataSource": "This:C1470.value",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 128
+						}
+					]
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Form.data.alternatives.language",
+					"top": 14,
+					"left": 790,
+					"width": 210,
+					"height": 46
+				}
+			}
+		}
+	],
+	"geometryStamp": 673,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"width": 1010,
+	"height": 270
+}
