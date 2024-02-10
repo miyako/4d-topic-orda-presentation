@@ -4,7 +4,7 @@
 
 ## Data
 
-download the tsv from [IMDb](https://datasets.imdbws.com) and run 
+download tsv from [IMDb](https://datasets.imdbws.com) and run 
 
 1. [create_titles](https://github.com/miyako/4d-topic-orda-presentation/blob/main/orda/Project/Sources/Methods/create_titles.4dm)
 1. [create_attributes](https://github.com/miyako/4d-topic-orda-presentation/blob/main/orda/Project/Sources/Methods/create_attributes.4dm)
