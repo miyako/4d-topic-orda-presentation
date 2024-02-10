@@ -241,10 +241,18 @@
 						}
 					]
 				}
-			}
+			},
+			"entryOrder": [
+				"q.TITLE",
+				"q.PRINCIPAL_or_NAME",
+				"Form.data.col",
+				"Form.data.item.principals",
+				"Form.data.item.names",
+				"data.col.queryPath"
+			]
 		}
 	],
-	"geometryStamp": 903,
+	"geometryStamp": 904,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

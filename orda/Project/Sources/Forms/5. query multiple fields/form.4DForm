@@ -171,7 +171,13 @@
 					"hideFocusRing": true,
 					"borderStyle": "none"
 				}
-			}
+			},
+			"entryOrder": [
+				"q.NAME_or_TITLE",
+				"Form.data.col",
+				"Form.data.sel1",
+				"data.col.queryPath"
+			]
 		}
 	],
 	"geometryStamp": 739,
