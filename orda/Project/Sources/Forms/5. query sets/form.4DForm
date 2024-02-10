@@ -53,7 +53,7 @@
 						{
 							"header": {
 								"text": "TITLE",
-								"name": "名前"
+								"name": "TITLE"
 							},
 							"name": "Column1",
 							"footer": {
@@ -69,7 +69,7 @@
 						},
 						{
 							"header": {
-								"name": "Header1",
+								"name": "YEAR",
 								"text": "YEAR"
 							},
 							"name": "Column2",
@@ -87,7 +87,7 @@
 						},
 						{
 							"header": {
-								"name": "Header2",
+								"name": "GENRE",
 								"text": "GENRE"
 							},
 							"name": "Column3",
@@ -131,8 +131,8 @@
 					"columns": [
 						{
 							"header": {
-								"text": "STAFF",
-								"name": "主要スタッフ"
+								"text": "PRINCIPAL",
+								"name": "PRINCIPAL"
 							},
 							"name": "Column4",
 							"footer": {
@@ -148,7 +148,7 @@
 						}
 					]
 				},
-				"q.人物名": {
+				"q.PRINCIPAL": {
 					"type": "input",
 					"left": 650,
 					"top": 33,
@@ -158,7 +158,7 @@
 					"events": [
 						"onDataChange"
 					],
-					"method": "ObjectMethods/q.人物名.4dm",
+					"method": "ObjectMethods/q.PRINCIPAL.4dm",
 					"placeholder": "人物名で検索…",
 					"sizingX": "move"
 				},
@@ -192,7 +192,7 @@
 						{
 							"header": {
 								"text": "PERSON",
-								"name": "関係者"
+								"name": "PERSON"
 							},
 							"name": "Column5",
 							"footer": {
@@ -210,16 +210,16 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "人物名:",
+					"text": "PRINCIPAL:",
 					"top": 33,
-					"left": 563,
-					"width": 77,
+					"left": 523,
+					"width": 117,
 					"height": 22,
 					"class": "demo",
 					"textAlign": "right",
 					"sizingX": "move"
 				},
-				"q.タイトル": {
+				"q.TITLE": {
 					"type": "input",
 					"left": 120,
 					"top": 33,
@@ -229,12 +229,12 @@
 					"events": [
 						"onDataChange"
 					],
-					"method": "ObjectMethods/q.タイトル.4dm",
+					"method": "ObjectMethods/q.TITLE.4dm",
 					"placeholder": "タイトルで検索…"
 				},
 				"Text1": {
 					"type": "text",
-					"text": "タイトル:",
+					"text": "TITLE:",
 					"top": 33,
 					"left": 13,
 					"width": 97,
@@ -263,7 +263,7 @@
 			}
 		}
 	],
-	"geometryStamp": 732,
+	"geometryStamp": 743,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

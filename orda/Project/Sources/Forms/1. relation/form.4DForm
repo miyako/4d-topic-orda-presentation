@@ -54,7 +54,7 @@
 						{
 							"header": {
 								"text": "GENRE",
-								"name": "名前2"
+								"name": "GENRE"
 							},
 							"name": "Column4",
 							"footer": {
@@ -101,7 +101,7 @@
 						{
 							"header": {
 								"text": "TITLE",
-								"name": "名前"
+								"name": "TITLE"
 							},
 							"name": "Column1",
 							"footer": {
@@ -117,7 +117,7 @@
 						},
 						{
 							"header": {
-								"name": "Header1",
+								"name": "YEAR",
 								"text": "YEAR"
 							},
 							"name": "Column2",
@@ -146,7 +146,7 @@
 			}
 		}
 	],
-	"geometryStamp": 654,
+	"geometryStamp": 657,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

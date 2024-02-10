@@ -14,7 +14,7 @@
 		"onLoad",
 		"onUnload"
 	],
-	"windowTitle": "スタッフ",
+	"windowTitle": "PERSON",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -53,7 +53,7 @@
 						{
 							"header": {
 								"text": "NAME",
-								"name": "氏名"
+								"name": "NAME"
 							},
 							"name": "Column1",
 							"footer": {
@@ -82,7 +82,7 @@
 						"onSelectionChange"
 					],
 					"listboxType": "collection",
-					"dataSource": "Form:C1466.data.sel.titles",
+					"dataSource": "Form:C1466.data.sel.getTitles()",
 					"resizingMode": "legacy",
 					"horizontalLineStroke": "transparent",
 					"verticalLineStroke": "transparent",
@@ -95,11 +95,14 @@
 					"currentItemPositionSource": "",
 					"currentItemSource": "",
 					"bottom": 260,
+					"selectionMode": "none",
+					"hideFocusRing": false,
+					"focusable": false,
 					"columns": [
 						{
 							"header": {
 								"text": "TITLE",
-								"name": "タイトル"
+								"name": "TITLE"
 							},
 							"name": "Column5",
 							"footer": {
@@ -115,7 +118,7 @@
 						},
 						{
 							"header": {
-								"name": "Header1",
+								"name": "JAPANESE TITLE",
 								"text": "JAPANESE TITLE"
 							},
 							"name": "Column2",
@@ -126,7 +129,7 @@
 						}
 					]
 				},
-				"q.人物名または作品名": {
+				"q.NAME_or_TITLE": {
 					"type": "input",
 					"left": 180,
 					"top": 33,
@@ -136,33 +139,24 @@
 					"events": [
 						"onDataChange"
 					],
-					"method": "ObjectMethods/q.人物名または作品名.4dm",
-					"placeholder": "人物名または作品名で検索…",
+					"method": "ObjectMethods/q.NAME_or_TITLE.4dm",
+					"placeholder": "part of a name, title or an altertive title",
 					"right": 680
 				},
 				"Text1": {
 					"type": "text",
-					"text": "人物名または作品名:",
+					"text": "NAME or TITLE:",
 					"top": 33,
 					"left": 13,
 					"width": 157,
 					"height": 22,
 					"class": "demo",
 					"textAlign": "right"
-				},
-				"Text3": {
-					"type": "text",
-					"text": "関係者を検索することができます。",
-					"top": 10,
-					"left": 179,
-					"width": 236,
-					"height": 16,
-					"sizingX": "fixed"
 				}
 			}
 		}
 	],
-	"geometryStamp": 689,
+	"geometryStamp": 717,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

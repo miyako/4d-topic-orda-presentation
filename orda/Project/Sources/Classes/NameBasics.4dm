@@ -8,7 +8,7 @@ local Function search($q : Text; $queryParams : Object) : cs:C1710.TitlePrincipa
 		return $queryParams=Null:C1517 ? This:C1470.all() : This:C1470.all($queryParams)
 	Else 
 		
-		$criteria:=["titles.primaryTitle == :1 or NAME == :1"; "@"+$phrase+"@"]
+		$criteria:=["NAME == :1 or titles.primaryTitle == :1 or titles.alternatives.title == :1 or principalTitles.primaryTitle == :1 or principalTitles.alternatives.title == :1"; "@"+$phrase+"@"]
 		
 		If ($queryParams#Null:C1517)
 			$criteria.push($queryParams)

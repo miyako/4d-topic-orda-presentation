@@ -3,6 +3,7 @@ Class extends Entity
 Alias titles _titleForName._titleForNames
 Alias professions _professionsForName._professionForName
 Alias NAME primaryName
+Alias principalTitles _principalsForName._titleForPrincipals
 
 Function get ROLE() : Text
 	

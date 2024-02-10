@@ -36,8 +36,6 @@ u0040:arobase
 		$phrase:=This:C1470.trim(Substring:C12($q; $pos{2}; $len{2}))
 		Case of 
 			: ($phrase="")
-			: (Position:C15(" "; $phrase; *)#0)
-				$phrases.push($phrase+"@")
 			Else 
 				$phrases.push("@"+$phrase+"@")
 		End case 
