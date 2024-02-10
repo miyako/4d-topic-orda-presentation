@@ -5,7 +5,7 @@ For ($t; 1; Get last table number:C254)
 	End if 
 End for 
 
-$files:=Folder:C1567("/DATA/SQL").files(fk ignore invisible:K87:22).query("extension == :1"; ".sql")
+$files:=Folder:C1567("/DATA/SQL").files(fk recursive:K87:7 | fk ignore invisible:K87:22).query("extension == :1"; ".sql")
 
 For each ($file; $files)
 	SQL EXECUTE SCRIPT:C1089($file.platformPath; SQL On error confirm:K49:16)

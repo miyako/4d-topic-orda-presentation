@@ -16,9 +16,14 @@
 			"TitleBasics",
 			"TitleGenres",
 			"TitlePrincipals"
-		],
+		]
+	},
+	"create": {
 		"methods": [
-			"import_data"
+			"create_attributes",
+			"create_names",
+			"create_principals",
+			"create_titles"
 		]
 	},
 	"examples": {
@@ -33,11 +38,17 @@
 			"ex_008"
 		]
 	},
+	"import": {
+		"methods": [
+			"import_data"
+		]
+	},
 	"ORDA": {
 		"classes": [
 			"DataStore",
 			"NameBasics",
 			"NameBasicsEntity",
+			"NameBasicsSelection",
 			"TitleAkasEntity",
 			"TitleBasics",
 			"TitleBasicsEntity",
