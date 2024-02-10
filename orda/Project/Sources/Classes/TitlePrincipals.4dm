@@ -23,4 +23,6 @@ local Function search($q : Text; $queryParams : Object) : cs:C1710.TitlePrincipa
 		$criteria.push($queryParams)
 	End if 
 	
+	$criteria.push({queryPath: True:C214})
+	
 	return This:C1470.query.apply(ds:C1482.TitlePrincipals; $criteria)

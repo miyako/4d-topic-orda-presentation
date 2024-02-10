@@ -7,14 +7,14 @@
 	"windowSizingX": "variable",
 	"windowSizingY": "variable",
 	"windowMinWidth": 1050,
-	"windowMinHeight": 270,
+	"windowMinHeight": 450,
 	"windowMaxWidth": 32767,
 	"windowMaxHeight": 32767,
 	"events": [
 		"onLoad",
 		"onUnload"
 	],
-	"windowTitle": "PERSON",
+	"windowTitle": "Names",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -25,7 +25,7 @@
 				"Form.data.col": {
 					"type": "listbox",
 					"left": 10,
-					"top": 70,
+					"top": 250,
 					"width": 330,
 					"height": 190,
 					"events": [
@@ -47,8 +47,9 @@
 					"selectedItemsSource": "Form:C1466.data.sel",
 					"currentItemPositionSource": "Form:C1466.data.pos",
 					"currentItemSource": "Form:C1466.data.item",
-					"bottom": 260,
+					"bottom": 440,
 					"right": 340,
+					"staticColumnCount": 1,
 					"columns": [
 						{
 							"header": {
@@ -72,7 +73,7 @@
 				"Form.data.sel1": {
 					"type": "listbox",
 					"left": 350,
-					"top": 70,
+					"top": 250,
 					"width": 690,
 					"height": 190,
 					"events": [
@@ -94,10 +95,11 @@
 					"selectedItemsSource": "",
 					"currentItemPositionSource": "",
 					"currentItemSource": "",
-					"bottom": 260,
+					"bottom": 440,
 					"selectionMode": "none",
 					"hideFocusRing": false,
 					"focusable": false,
+					"staticColumnCount": 2,
 					"columns": [
 						{
 							"header": {
@@ -125,14 +127,15 @@
 							"dataSource": "This:C1470.TITLE_JA",
 							"footer": {
 								"name": "Footer2"
-							}
+							},
+							"truncateMode": "none"
 						}
 					]
 				},
 				"q.NAME_or_TITLE": {
 					"type": "input",
 					"left": 180,
-					"top": 33,
+					"top": 13,
 					"width": 500,
 					"height": 22,
 					"class": "demo",
@@ -146,17 +149,32 @@
 				"Text1": {
 					"type": "text",
 					"text": "NAME or TITLE:",
-					"top": 33,
+					"top": 13,
 					"left": 13,
 					"width": 157,
 					"height": 22,
 					"class": "demo",
 					"textAlign": "right"
+				},
+				"data.col.queryPath": {
+					"type": "input",
+					"left": 10,
+					"top": 50,
+					"width": 1015,
+					"height": 193,
+					"enterable": false,
+					"fill": "transparent",
+					"dataSource": "Form:C1466.data.col.queryPath",
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "visible",
+					"showSelection": true,
+					"hideFocusRing": true,
+					"borderStyle": "none"
 				}
 			}
 		}
 	],
-	"geometryStamp": 717,
+	"geometryStamp": 739,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
@@ -166,5 +184,5 @@
 		}
 	},
 	"width": 1050,
-	"height": 270
+	"height": 450
 }

@@ -7,14 +7,14 @@
 	"windowSizingX": "variable",
 	"windowSizingY": "variable",
 	"windowMinWidth": 1050,
-	"windowMinHeight": 270,
+	"windowMinHeight": 450,
 	"windowMaxWidth": 32767,
 	"windowMaxHeight": 32767,
 	"events": [
 		"onLoad",
 		"onUnload"
 	],
-	"windowTitle": "コラボレーション",
+	"windowTitle": "Movies",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -22,90 +22,10 @@
 		},
 		{
 			"objects": {
-				"Form.data.col": {
-					"type": "listbox",
-					"left": 10,
-					"top": 70,
-					"width": 630,
-					"height": 190,
-					"events": [
-						"onClick",
-						"onHeaderClick",
-						"onDataChange",
-						"onSelectionChange"
-					],
-					"listboxType": "collection",
-					"dataSource": "Form:C1466.data.col",
-					"resizingMode": "legacy",
-					"horizontalLineStroke": "transparent",
-					"verticalLineStroke": "transparent",
-					"scrollbarHorizontal": "hidden",
-					"alternateFill": "automaticAlternate",
-					"sizingY": "grow",
-					"class": "demo",
-					"sizingX": "grow",
-					"selectedItemsSource": "Form:C1466.data.sel",
-					"currentItemPositionSource": "Form:C1466.data.pos",
-					"currentItemSource": "Form:C1466.data.item",
-					"bottom": 260,
-					"selectionMode": "single",
-					"columns": [
-						{
-							"header": {
-								"text": "TITLE",
-								"name": "TITLE"
-							},
-							"name": "Column1",
-							"footer": {
-								"name": "Footer1"
-							},
-							"truncateMode": "none",
-							"enterable": false,
-							"resizable": true,
-							"dataSource": "This:C1470.TITLE",
-							"minWidth": 128,
-							"textAlign": "left",
-							"width": 400
-						},
-						{
-							"header": {
-								"name": "YEAR",
-								"text": "YEAR"
-							},
-							"name": "Column2",
-							"dataSourceTypeHint": "number",
-							"resizable": false,
-							"enterable": false,
-							"dataSource": "This:C1470.YEAR",
-							"verticalAlign": "automatic",
-							"textAlign": "center",
-							"footer": {
-								"name": "Footer2"
-							},
-							"truncateMode": "none",
-							"width": 100
-						},
-						{
-							"header": {
-								"name": "GENRE",
-								"text": "GENRE"
-							},
-							"name": "Column3",
-							"dataSource": "This:C1470.GENRE",
-							"enterable": false,
-							"resizable": false,
-							"footer": {
-								"name": "Footer3"
-							},
-							"truncateMode": "none",
-							"width": 130
-						}
-					]
-				},
 				"Form.data.item.principals": {
 					"type": "listbox",
 					"left": 650,
-					"top": 70,
+					"top": 250,
 					"width": 190,
 					"height": 190,
 					"events": [
@@ -127,7 +47,8 @@
 					"selectedItemsSource": "",
 					"currentItemPositionSource": "",
 					"currentItemSource": "",
-					"bottom": 260,
+					"bottom": 440,
+					"staticColumnCount": 1,
 					"columns": [
 						{
 							"header": {
@@ -148,24 +69,24 @@
 						}
 					]
 				},
-				"q.PRINCIPAL": {
+				"q.PRINCIPAL_or_NAME": {
 					"type": "input",
-					"left": 650,
-					"top": 33,
-					"width": 388,
+					"left": 670,
+					"top": 13,
+					"width": 368,
 					"height": 22,
 					"class": "demo",
 					"events": [
 						"onDataChange"
 					],
-					"method": "ObjectMethods/q.PRINCIPAL.4dm",
-					"placeholder": "人物名で検索…",
+					"method": "ObjectMethods/q.PRINCIPAL_or_NAME.4dm",
+					"placeholder": "part of a name",
 					"sizingX": "move"
 				},
 				"Form.data.item.names": {
 					"type": "listbox",
 					"left": 850,
-					"top": 70,
+					"top": 250,
 					"width": 190,
 					"height": 190,
 					"events": [
@@ -187,12 +108,13 @@
 					"selectedItemsSource": "",
 					"currentItemPositionSource": "",
 					"currentItemSource": "",
-					"bottom": 260,
+					"bottom": 440,
+					"staticColumnCount": 1,
 					"columns": [
 						{
 							"header": {
-								"text": "PERSON",
-								"name": "PERSON"
+								"text": "NAME",
+								"name": "NAME"
 							},
 							"name": "Column5",
 							"footer": {
@@ -210,10 +132,10 @@
 				},
 				"Text": {
 					"type": "text",
-					"text": "PRINCIPAL:",
-					"top": 33,
-					"left": 523,
-					"width": 117,
+					"text": "PRINCIPAL or NAME:",
+					"top": 13,
+					"left": 463,
+					"width": 197,
 					"height": 22,
 					"class": "demo",
 					"textAlign": "right",
@@ -222,48 +144,107 @@
 				"q.TITLE": {
 					"type": "input",
 					"left": 120,
-					"top": 33,
-					"width": 388,
+					"top": 13,
+					"width": 328,
 					"height": 22,
 					"class": "demo",
 					"events": [
 						"onDataChange"
 					],
 					"method": "ObjectMethods/q.TITLE.4dm",
-					"placeholder": "タイトルで検索…"
+					"placeholder": "part of a title or alt. title"
 				},
 				"Text1": {
 					"type": "text",
 					"text": "TITLE:",
-					"top": 33,
+					"top": 13,
 					"left": 13,
 					"width": 97,
 					"height": 22,
 					"class": "demo",
 					"textAlign": "right"
 				},
-				"Text2": {
-					"type": "text",
-					"text": "コラボレーション作品を検索することができます。",
-					"top": 10,
-					"left": 649,
-					"width": 296,
-					"height": 16,
-					"sizingX": "move"
+				"data.col.queryPath": {
+					"type": "input",
+					"left": 10,
+					"top": 50,
+					"width": 1015,
+					"height": 193,
+					"enterable": false,
+					"fill": "transparent",
+					"dataSource": "Form:C1466.data.col.queryPath",
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "visible",
+					"showSelection": true,
+					"hideFocusRing": true,
+					"borderStyle": "none"
 				},
-				"Text3": {
-					"type": "text",
-					"text": "作品を検索することができます。",
-					"top": 10,
-					"left": 120,
-					"width": 236,
-					"height": 16,
-					"sizingX": "fixed"
+				"Form.data.col": {
+					"type": "listbox",
+					"left": 10,
+					"top": 250,
+					"width": 630,
+					"height": 190,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.data.col",
+					"resizingMode": "legacy",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"scrollbarHorizontal": "hidden",
+					"alternateFill": "automaticAlternate",
+					"sizingY": "grow",
+					"class": "demo",
+					"sizingX": "move",
+					"selectedItemsSource": "Form:C1466.data.sel",
+					"currentItemPositionSource": "Form:C1466.data.pos",
+					"currentItemSource": "Form:C1466.data.item",
+					"bottom": 440,
+					"selectionMode": "multiple",
+					"hideFocusRing": false,
+					"focusable": true,
+					"staticColumnCount": 2,
+					"columns": [
+						{
+							"header": {
+								"text": "TITLE",
+								"name": "TITLE"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"truncateMode": "none",
+							"enterable": false,
+							"resizable": false,
+							"dataSource": "This:C1470.TITLE",
+							"minWidth": 128,
+							"textAlign": "left",
+							"width": 220
+						},
+						{
+							"header": {
+								"name": "JAPANESE TITLE",
+								"text": "JAPANESE TITLE"
+							},
+							"name": "Column2",
+							"dataSource": "This:C1470.TITLE_JA",
+							"footer": {
+								"name": "Footer2"
+							},
+							"truncateMode": "none"
+						}
+					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 743,
+	"geometryStamp": 903,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",
@@ -273,5 +254,5 @@
 		}
 	},
 	"width": 1050,
-	"height": 270
+	"height": 450
 }
