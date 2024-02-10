@@ -522,6 +522,11 @@
 			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
 		</field_ref>
 	</index>
+	<index kind="regular" uuid="4A2FB34A86694DF38F5BA801F3404A49" type="1">
+		<field_ref uuid="E0DA01CDA7C2448C94C5BD3D5B780CA4" name="endYear">
+			<table_ref uuid="1FFF4B316EB94669A8F5BD34381D8226" name="TitleBasics"/>
+		</field_ref>
+	</index>
 	<index kind="regular" uuid="4AAD09863BE346C0B14342B6441AB1BF" type="1">
 		<field_ref uuid="7EC6C780DDFC4C1986B6CAEB67BB2CCB" name="value">
 			<table_ref uuid="60A2CA348BC2408BB6B8D3EA288FE128" name="Profession"/>
