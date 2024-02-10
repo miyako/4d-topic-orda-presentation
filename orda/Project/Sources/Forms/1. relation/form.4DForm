@@ -14,7 +14,7 @@
 		"onLoad",
 		"onUnload"
 	],
-	"windowTitle": "",
+	"windowTitle": "Movies",
 	"destination": "detailScreen",
 	"pages": [
 		{

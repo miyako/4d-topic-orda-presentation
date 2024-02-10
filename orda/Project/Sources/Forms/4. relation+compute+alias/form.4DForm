@@ -14,7 +14,7 @@
 		"onLoad",
 		"onUnload"
 	],
-	"windowTitle": "映画",
+	"windowTitle": "Movies",
 	"destination": "detailScreen",
 	"pages": [
 		{

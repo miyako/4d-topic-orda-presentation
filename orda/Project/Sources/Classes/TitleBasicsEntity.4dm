@@ -24,16 +24,9 @@ exposed Function get TITLE_JA() : Text
 	
 	return This:C1470._titleForLanguage("ja")
 	
-local Function _queryForLanguage($language : Text) : Object
-	
-	$query:="alternatives.language.value == :1 and alternatives.title "+$event.operator+" :2"
-	$parameters:=[$language; $event.value]
-	
-	return New object:C1471("query"; $query; "parameters"; $parameters)
-	
 Function query TITLE_JA($event : Object) : Object
 	
-	return This:C1470._queryForLanguage("ja")
+	return ds:C1482.TitleBasics._queryForLanguage($event; "ja")  //This == DataClass, not Entity
 	
 exposed Function get GENRE() : Text
 	

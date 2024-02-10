@@ -108,3 +108,9 @@ local Function searchByNamesOrPrincipals($q : Text; $queryParams : Object) : cs:
 	
 	return This:C1470.query.apply(ds:C1482.TitleBasics; $criteria)
 	
+local Function _queryForLanguage($event : Object; $language : Text) : Object
+	
+	$query:="alternatives.language.value == :1 and alternatives.title "+$event.operator+" :2"
+	$parameters:=[$language; $event.value]
+	
+	return New object:C1471("query"; $query; "parameters"; $parameters)
